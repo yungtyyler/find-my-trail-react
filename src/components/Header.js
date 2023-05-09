@@ -14,10 +14,9 @@ const Header = () => {
     const [ menuOpen, setMenuOpen ] = useState(false);
 
     return (
-        <Navbar light sticky='top' expand='lg'>
+        <Navbar dark sticky='top' expand='lg'>
             <NavbarBrand className='ms-5 d-flex align-items-center' href='/'>
                 <img src={FindMyTrailLogo} alt='Find My Trail logo' className='float-start' />
-                <h1>Find My Trail</h1>
             </NavbarBrand>
 
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
@@ -30,7 +29,12 @@ const Header = () => {
                     </NavItem>
                     <NavItem>
                         <NavLink className='nav-link' to='#'>
-                            <i className='fa fa-list fa-lg' /> Directory
+                            <i className='fa fa-list fa-lg' /> Trails
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='nav-link' to='#'>
+                            <i className='fa fa-shield fa-lg' /> Safety
                         </NavLink>
                     </NavItem>
                     <NavItem>
