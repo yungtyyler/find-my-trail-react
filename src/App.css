@@ -136,7 +136,6 @@ footer {
     background-color: var(--color-text);
     padding: 20px;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -153,10 +152,6 @@ footer a {
 }
 
 @media (max-width: 767px) {
-    footer {
-        position: static;
-        text-align: left;
-    }
     footer ul {
         list-style: none;
         padding: 0;

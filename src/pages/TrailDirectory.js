@@ -60,14 +60,20 @@ const TrailDirectory = () => {
 
     return (
         <Container className='my-4 text-center'>
-            <input 
-                type='text'
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-                placeholder='Enter Location: City, ST'
-                className='search-input mb-3 mx-1'
-            />
-            <button onClick={handleSearch} className='search-button'>Search Trails</button>
+            <Row className='d-flex justify-content-center align-items-center'>
+                <Col md='6' lg='8' className='align-items-center'>
+                    <input 
+                        type='text'
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
+                        placeholder='Enter Location: City, ST'
+                        className='form-control-lg rounded shadow-sm w-100'
+                    />
+                </Col>
+                <Col md='4' lg='2'>
+                    <button onClick={handleSearch} className='btn btn-success' type='button'>Search Trails</button>
+                </Col>
+            </Row>
     
             {loading ? (
                 <div className='text-center mt-4'>

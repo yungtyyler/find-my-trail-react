@@ -10,11 +10,9 @@ import 'typeface-open-sans';
 import 'typeface-roboto';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import config from './config';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-const apiKey = config.apiKey;
 
 root.render(
   <React.StrictMode>
