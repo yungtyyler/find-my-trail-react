@@ -1,46 +1,69 @@
-# Getting Started with Create React App and Redux
+# Hiking Trail Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+The Hiking Trail Finder is a web application that allows users to explore and discover hiking trails, search for trails in a directory, rate and review trails, and authenticate users.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Trail Details**: View detailed information about hiking trails, including trail name, location, difficulty level, length, elevation gain, and description.
+- **Trail Directory**: Search for hiking trails based on location, such as city or state. Browse through a list of trails.
+- **Rating and Reviews**: Users can rate and leave reviews for trails they have hiked, providing valuable feedback to other users.
+- **User Authentication**: Users can create accounts, log in, and manage their profile. Authentication ensures that only registered users can rate, review, and access certain features.
+- **Interactive UI**: The application provides an intuitive and user-friendly interface, allowing users to navigate easily and find relevant information.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js, HTML, CSS, Bootstrap
+- **Backend**: Node.js
+- **Database**: MongoDB (future implementation, around June or July 2023)
+- **APIs**: National Park Services API (for trail data), Google Maps API (for geocoding)
+- **User Authentication**: JSON Web Tokens (JWT), bcrypt.js (for password hashing in the future)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup and Installation
 
-### `npm test`
+1. Clone the repository: `git clone https://github.com/yungtyyler/find-my-trail-react.git`
+2. Navigate to the project directory: `cd find-my-trail`
+3. Install dependencies: `npm install`
+4. Set up environment variables:
+   - Create a `.env` file in the root directory.
+   - Add the required environment variables, such as API keys and database connection details.
+5. Start the development server: `npm start`
+6. Open your web browser and visit `http://localhost:3000` to access the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Register for a new account or log in with existing credentials.
+2. Explore hiking trails by browsing through the trail directory or using the search functionality.
+3. View trail details to get more information about specific trails, including their location, difficulty level, length, and elevation gain.
+4. Rate and review trails based on your hiking experience.
+5. Update your profile information and manage your account settings.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Enhancements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **User Authentication**: Allow users to create a profile and leave ratings and reviews for trails.
+- **Favorite Trails**: Allow users to save trails as favorites for quick access.
+- **Trail Recommendations**: Provide personalized trail recommendations based on user preferences and past activity.
+- **Trail Maps and Directions**: Integrate maps and directions to guide users to the trailhead.
+- **Mobile Application**: Develop a mobile application for on-the-go access to hiking trail information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions to the Hiking Trail Finder project are welcome! If you have any ideas, improvements, or bug fixes, please submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+When contributing to this repository, please ensure that you follow the [code of conduct](CODE_OF_CONDUCT.md).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The Hiking Trail Finder project is licensed under the [MIT License](LICENSE).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Acknowledgements
 
-## Learn More
+- National Park Services API for providing trail data
+- Google Maps API for geocoding functionality
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any inquiries or feedback, please contact the project maintainers:
+
+- Tyler Varzeas - tyler.varzeas@gmail.com
+
+Feel free to visit my website at https://tylervarzeas.com
