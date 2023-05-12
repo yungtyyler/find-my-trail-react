@@ -14,7 +14,7 @@ const Header = () => {
     const [ menuOpen, setMenuOpen ] = useState(false);
 
     return (
-        <Navbar dark sticky='top' expand='lg'>
+        <Navbar dark expand='lg'>
             <NavbarBrand className='ms-5 d-flex align-items-center' href='/'>
                 <img src={FindMyTrailLogo} alt='Find My Trail logo' className='float-start' />
             </NavbarBrand>
