@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { logger } from 'redux-logger';
+import { trailsReducer } from '../features/trails/trailsSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    trails: trailsReducer
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([logger])
 });

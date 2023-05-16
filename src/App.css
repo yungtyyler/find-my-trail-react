@@ -104,6 +104,11 @@ body {
     margin-top: 1rem;
 }
 
+.custom-card-img {
+    width: 100%;
+    height: auto;
+}
+
 /* Footer styles */
 /* footer {
     background-color: var(--color-primary);
