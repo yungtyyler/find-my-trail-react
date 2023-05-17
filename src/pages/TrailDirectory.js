@@ -21,6 +21,11 @@ const TrailDirectory = () => {
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = trails.slice(indexOfFirstCard, indexOfLastCard);
 
+    console.log('trails:', trails);
+    console.log('currentCards:', currentCards);
+    console.log('indexOfFirstCard:', indexOfFirstCard);
+    console.log('indexOfLastCard:', indexOfLastCard);
+
     const handleSearch =() => {
         dispatch(fetchTrails({ searchState: inputState }));
     };
