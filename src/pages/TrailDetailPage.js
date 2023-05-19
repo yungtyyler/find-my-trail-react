@@ -1,7 +1,8 @@
-import { Container, Row } from "reactstrap";
+import { Container, Row, Col, } from "reactstrap";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectTrailById } from "../features/trails/trailsSlice";
+import TrailImagesCarousel from "../components/TrailImagesCarousel";
 import TrailDetail from "../features/trails/TrailDetail";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
@@ -27,9 +28,14 @@ const TrailDetailPage = () => {
 
     return (
     <div>
-        <Container>
-            <Row>
-                {content}
+        <Container className='d-flex my-5'>
+            <Row className='align-items-center'>
+                <Col>
+                    {content}
+                </Col>
+                <Col>
+                    <TrailImagesCarousel trail={trail} />
+                </Col>
             </Row>
         </Container>
     </div>

@@ -1,21 +1,19 @@
-import { Card, CardImg, CardText, CardBody, Col } from "reactstrap";
+import { Card, CardText, CardTitle, CardBody, Col } from "reactstrap";
 
 const TrailDetail = ({ trail }) => {
-    const { images, fullName, description } = trail;
-    const trailImages = images.map((image) => {
-        return image.url;
-    });
-    console.log(trail);
+    const { fullName, description } = trail;
 
     return (
         <Col>
-            <Card md='5' className='m-1'>
-                <CardImg top src={trailImages[0]} alt={fullName} className='h-100'/>
-                <CardBody>
-                    <CardText className="">{description}</CardText>        
+            <Card md='5' className='p-3 text-center'>
+                <CardTitle>
+                    <h2>{fullName}</h2>
+                </CardTitle>
+                <CardBody className='text-start'>
+                    <CardText className="lead">{description}</CardText>    
                 </CardBody>
             </Card>
-            {trailImages}
+            <button className='my-2 btn btn-success btn-lg'>Safety Information</button>
         </Col>
     );
 };
