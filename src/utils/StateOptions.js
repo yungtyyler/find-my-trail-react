@@ -1,10 +1,6 @@
-const StateOptions = ({ searchState, setInputState }) => {
+const StateOptions = () => {
     return (
-        <select 
-            value={searchState}
-            onChange={(e) => setInputState(e.target.value)}
-            className='form-control-lg rounded shadow-sm w-100'
-        >
+        <>
             <option value='' disabled selected>Select a state</option>
             <option value='AL'>Alabama</option>
             <option value='AK'>Alaska</option>
@@ -57,7 +53,7 @@ const StateOptions = ({ searchState, setInputState }) => {
             <option value='WI'>Wisconsin</option>
             <option value='WY'>Wyoming</option>
             <option value=''>ALL</option>
-    </select>
+        </>
     )
 };
 

@@ -3,7 +3,7 @@
     --color-primary: #388e3c; /* green */
     --color-secondary: #c2a200; /* gold */
     --color-text: #1b1b1b; /* black */
-    --color-background: #ffffff; /* white */
+    --color-background: rgb(255, 251, 243); /* white */
 }
 
 /* Global styles */
@@ -11,6 +11,11 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--color-text);
     background-color: var(--color-background);
+}
+
+h1 {
+    font-family: 'Lobster', sans-serif;
+    color: var(--color-primary)
 }
 
 /* Header styles */
@@ -120,7 +125,7 @@ body {
     border-radius: 10px;
 }
 
-.image-container img {
+.image-container img, CardImg {
     position: absolute;
     top: 0;
     left: 0;
@@ -128,14 +133,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
-/* Footer styles */
-/* footer {
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    padding: 1.5rem;
-    font-size: 0.8rem;
-} */
 
 .footer-logo {
     height: 150px;

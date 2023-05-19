@@ -10,57 +10,67 @@ const TrailDirectory = () => {
     const [ inputState, setInputState ] = useState('');
     const [ currentPage, setCurrentPage ] = useState(1);
     const [ cardsPerPage ] = useState(12);
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const [ searchHeaderText, setSearchHeaderText ] = useState('Nowhere');
 
     const trails = useSelector(selectAllTrails);
     const searchState = useSelector((state) => state.trails.searchState);
     const loading = useSelector((state) => state.trails.isLoading);
+    
     const dispatch = useDispatch();
 
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = trails.slice(indexOfFirstCard, indexOfLastCard);
 
-    console.log('trails:', trails);
-    console.log('currentCards:', currentCards);
-    console.log('indexOfFirstCard:', indexOfFirstCard);
-    console.log('indexOfLastCard:', indexOfLastCard);
-
     const handleSearch =() => {
         dispatch(fetchTrails({ searchState: inputState }));
+        setSearchHeaderText(inputState);
     };
 
     return (
-        <Container className='my-4 text-center'>
-            <Row className='d-flex justify-content-center align-items-center'>
-                <Col md='8' className='align-items-center'>
-                    <StateOptions searchState={searchState} setInputState={setInputState} />
-                </Col>
-                <Col>
-                    <button
-                        onClick={handleSearch}
-                        className='btn btn-success my-2'
-                        type='button'
-                        disabled={loading}
-                    >
-                        {loading ? 'Loading...' : 'Search Trails'}
-                    </button>
-                </Col>
-            </Row>
-            {trails && trails.length > 0 ? (
-                <>
-                    <TrailsList trails={currentCards} />
-                    <Pagination 
-                        cardsPerPage={cardsPerPage}
-                        totalCards={trails.length}
-                        currentPage={currentPage}
-                        paginate={paginate}
-                    />
-                </>
-            ) : (
-                <p>No Trails available.</p>
-            )}
-        </Container>
+        <div>
+            <h1 className='fw-bold m-3 px-5'>Trail Directory</h1>
+            <Container className='my-4 text-center'>
+                <Row className='d-flex justify-content-center align-items-center'>
+                    <Col md='8' className='align-items-center'>
+                        <select 
+                            value={searchState}
+                            onChange={(e) => setInputState(e.target.value)}
+                            className='form-control-lg rounded shadow-sm w-100'
+                        >
+                            <StateOptions />
+                        </select>
+                    </Col>
+                    <Col>
+                        <button
+                            onClick={handleSearch}
+                            className='btn btn-success my-2'
+                            type='button'
+                            disabled={loading}
+                        >
+                            {loading ? 'Loading...' : 'Search Trails'}
+                        </button>
+                    </Col>
+                </Row>
+                <h2 className='fst-italic my-3 px-2 text-start'>Hiking trails and parks found in <span className='text-success'>{searchHeaderText}</span>: </h2>
+                <Row>
+                    {trails && trails.length > 0 ? (
+                        <>
+                            <TrailsList trails={currentCards} />
+                            <Pagination 
+                                cardsPerPage={cardsPerPage}
+                                totalCards={trails.length}
+                                currentPage={currentPage}
+                                paginate={paginate}
+                            />
+                        </>
+                    ) : (
+                        <p>No Trails available.</p>
+                    )}
+                </Row>
+            </Container>
+        </div>
     )
 }
 

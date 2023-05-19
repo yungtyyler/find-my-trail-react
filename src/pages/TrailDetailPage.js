@@ -27,18 +27,18 @@ const TrailDetailPage = () => {
     }
 
     return (
-    <div>
-        <Container className='d-flex my-5'>
-            <Row className='align-items-center'>
-                <Col>
-                    {content}
-                </Col>
-                <Col>
-                    <TrailImagesCarousel trail={trail} />
-                </Col>
-            </Row>
-        </Container>
-    </div>
+        <div>
+            <Container className='d-flex my-5'>
+                <Row className='align-items-center'>
+                    <Col>
+                        {content}
+                    </Col>
+                    <Col>
+                        <TrailImagesCarousel trail={trail} />
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
 

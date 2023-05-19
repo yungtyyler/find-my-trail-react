@@ -21,7 +21,7 @@ const TrailsList = ({ trails }) => {
             {
                 trails.map((trail) => {
                     return (
-                        <Col key={trail.id} sm="4" className="mb-4">
+                        <Col key={trail.id} md='6' lg='4' xl='3' className="mb-4">
                             <TrailCard trail={trail} />
                         </Col>
                     )
