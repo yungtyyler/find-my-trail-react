@@ -29,48 +29,50 @@ const TrailDirectory = () => {
     };
 
     return (
-        <div>
-            <h1 className='fw-bold m-3 px-5'>Trail Directory</h1>
-            <Container className='my-4 text-center'>
-                <Row className='d-flex justify-content-center align-items-center'>
-                    <Col md='8' className='align-items-center'>
-                        <select 
-                            value={searchState}
-                            onChange={(e) => setInputState(e.target.value)}
-                            className='form-control-lg rounded shadow-sm w-100'
-                        >
-                            <StateOptions />
-                        </select>
-                    </Col>
-                    <Col>
-                        <button
-                            onClick={handleSearch}
-                            className='btn btn-success my-2'
-                            type='button'
-                            disabled={loading}
-                        >
-                            {loading ? 'Loading...' : 'Search Trails'}
-                        </button>
-                    </Col>
-                </Row>
-                <h2 className='fst-italic my-3 px-2 text-start'>Hiking trails and parks found in <span className='text-success'>{searchHeaderText}</span>: </h2>
-                <Row>
-                    {trails && trails.length > 0 ? (
-                        <>
-                            <TrailsList trails={currentCards} />
-                            <Pagination 
-                                cardsPerPage={cardsPerPage}
-                                totalCards={trails.length}
-                                currentPage={currentPage}
-                                paginate={paginate}
-                            />
-                        </>
-                    ) : (
-                        <p>No Trails available.</p>
-                    )}
-                </Row>
-            </Container>
-        </div>
+        <Container className='my-5 text-center'>
+            <Row className='mb-5 py-3'>
+                <h1 className='text-start fw-bold my-3'>Trail Directory</h1>
+                <p className='text-start lead fst-italic'>Select a state to search in using the dropdown below!</p>
+                <hr />
+            </Row>
+            <Row className='d-flex justify-content-center align-items-center'>
+                <Col md='8' className='align-items-center'>
+                    <select 
+                        value={searchState}
+                        onChange={(e) => setInputState(e.target.value)}
+                        className='form-control-lg rounded shadow-sm w-100'
+                    >
+                        <StateOptions />
+                    </select>
+                </Col>
+                <Col>
+                    <button
+                        onClick={handleSearch}
+                        className='btn btn-success my-2'
+                        type='button'
+                        disabled={loading}
+                    >
+                        {loading ? 'Loading...' : 'Search Trails'}
+                    </button>
+                </Col>
+            </Row>
+            <h2 className='fst-italic my-3 px-2 text-start'>Hiking trails and parks found in <span className='text-success'>{searchHeaderText}</span>: </h2>
+            <Row>
+                {trails && trails.length > 0 ? (
+                    <>
+                        <TrailsList trails={currentCards} />
+                        <Pagination 
+                            cardsPerPage={cardsPerPage}
+                            totalCards={trails.length}
+                            currentPage={currentPage}
+                            paginate={paginate}
+                        />
+                    </>
+                ) : (
+                    <p>No Trails available.</p>
+                )}
+            </Row>
+        </Container>
     )
 }
 

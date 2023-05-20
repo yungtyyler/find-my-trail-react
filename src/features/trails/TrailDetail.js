@@ -13,7 +13,6 @@ const TrailDetail = ({ trail }) => {
                     <CardText className="lead">{description}</CardText>    
                 </CardBody>
             </Card>
-            <button className='my-2 btn btn-success btn-lg'>Safety Information</button>
         </Col>
     );
 };

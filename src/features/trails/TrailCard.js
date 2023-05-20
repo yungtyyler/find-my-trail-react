@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 const TrailCard = ({ trail }) => {
     const { id, images, fullName } = trail;
-
-    console.log(trail)
-
+    
     return (
         <Link to={`/trail-directory/${id}`}>
             <Card className='image-container'>

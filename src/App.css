@@ -15,7 +15,12 @@ body {
 
 h1 {
     font-family: 'Lobster', sans-serif;
-    color: var(--color-primary)
+    color: var(--color-primary);
+}
+
+.sub-header h2 {
+    font-family: 'Lobster', sans-serif;
+    color: var(--color-secondary);
 }
 
 /* Header styles */
