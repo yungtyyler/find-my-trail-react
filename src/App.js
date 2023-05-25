@@ -7,9 +7,11 @@ import Footer from './components/Footer';
 import TrailDirectory from './pages/TrailDirectory';
 import TrailDetailPage from './pages/TrailDetailPage';
 import ContactPage from './pages/ContactPage';
+import SafetyPage from './pages/SafetyPage';
+import AboutPage from './pages/AboutPage';
+import { fetchTrails } from './features/trails/trailsSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchTrails } from './features/trails/trailsSlice';
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +28,8 @@ function App() {
         <Route path='/trail-directory' element={ <TrailDirectory /> } />
         <Route path='/trail-directory/:id' element={ <TrailDetailPage /> } />
         <Route path='/contact-us' element={ <ContactPage /> } />
+        <Route path='/safety' element={ <SafetyPage /> } />
+        <Route path='/about-us' element={ <AboutPage /> } />
       </Routes>
       <Footer />
     </div>

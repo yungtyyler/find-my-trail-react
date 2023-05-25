@@ -29,43 +29,45 @@ const TrailDetailPage = () => {
     }
 
     return (
-        <Container className='my-5'>
-            <Row className='mb-5 py-3'>
+        <div>
+            <div className='mb-5 p-4'>
                 <h1 className='text-start fw-bold my-3'>{trail.name}: <span className='text-dark'>Details Page</span></h1>
                 <p className='text-start lead fst-italic'>Some quick facts and pictures of this trail!</p>
                 <hr />
-            </Row>
-            <Row className='align-items-center'>
-                <Col className='mx-5 text-center'>
-                    {content}
-                    <a href='/' className='m-2 btn btn-success btn-lg'>Safety Information</a>
-                    <button className='m-2 btn btn-warning btn-lg'>Rate & Comment</button>
-                </Col>
-                <Col className='mx-5'>
-                    <TrailImagesCarousel trail={trail} />
-                </Col>
-            </Row>
-            <Row className='my-5'>
-                <div className='sub-header'>
-                    <h2 className='text-end fw-bold my-3'>Comments and Ratings:</h2>
-                    <p className='text-end lead fst-italic'>Here's what YOU have to say!</p>
-                </div>
-            </Row>
-            <Row className='text-center'>
-                <Col md='6' className='text-start border-end'>
-                    <h3>Ratings</h3>
-                    <div>
-                        <RatingsList />                         
+            </div>
+            <Container className='my-5'>
+                <Row className='align-items-center justify-content-center'>
+                    <Col className='mx-5 text-center'>
+                        {content}
+                        <a href='/' className='m-2 btn btn-success btn-lg'>Safety Information</a>
+                        <button className='m-2 btn btn-warning btn-lg'>Rate & Comment</button>
+                    </Col>
+                    <Col className='m-5' lg={5}>
+                        <TrailImagesCarousel trail={trail} />
+                    </Col>
+                </Row>
+                <Row className='my-5'>
+                    <div className='sub-header text-center text-md-end'>
+                        <h2 className='fw-bold my-3'>Comments and Ratings:</h2>
+                        <p className='lead fst-italic'>Here's what YOU have to say!</p>
                     </div>
-                </Col>
-                <Col md='6' className='text-end'>
-                    <h3>Comments</h3>
-                    <div>
-                        <CommentsList />
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+                </Row>
+                <Row className='text-center gap-5 gap-md-0'>
+                    <Col md={6} className='text-md-start border-end'>
+                        <h3>Ratings</h3>
+                        <div>
+                            <RatingsList />                         
+                        </div>
+                    </Col>
+                    <Col md={6} className='text-md-end'>
+                        <h3>Comments</h3>
+                        <div>
+                            <CommentsList />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
 
