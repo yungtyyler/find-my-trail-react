@@ -33,8 +33,8 @@ const SafetyPage = () => {
                         <p className='lead'>Below you will find a list of useful tips to stay safe while hiking with Find My Trail:</p>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
+                <Row className='justify-content-center'>
+                    <Col md={10}>
                         <SafetyAccordian />
                     </Col>
                 </Row>

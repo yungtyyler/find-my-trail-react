@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
 /* Primary colors */
 :root {
     --color-primary: #388e3c; /* green */
     --color-secondary: #c2a200; /* gold */
     --color-text: #1b1b1b; /* black */
     --color-background: rgb(255, 251, 243); /* white */
+    --header-font: 'Kalam', cursive;
 }
 
 /* Global styles */
@@ -14,12 +17,12 @@ body {
 }
 
 h1 {
-    font-family: 'Lobster', sans-serif;
+    font-family: var(--header-font), sans-serif;
     color: var(--color-primary);
 }
 
 .sub-header h2 {
-    font-family: 'Lobster', sans-serif;
+    font-family: var(--header-font), sans-serif;
     color: var(--color-secondary);
 }
 
@@ -157,6 +160,45 @@ h1 {
 
 .btn-twitter {
     background-color: #1DA1F2;
+}
+
+#fullscreenCarousel {
+    width: 100vw;
+    background-color: rgba(27, 27, 27, 0.5); 
+}
+
+.carousel-inner,
+.carousel-item {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-image {
+    filter: brightness(30%) opacity(0.6);
+}
+
+.carousel-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    pointer-events: none;
+}
+
+.carousel-text-overlay h2 {
+    font-size: 3rem;
+}
+
+.carousel-text-overlay p {
+    font-size: 1.5rem;
 }
 
 footer {

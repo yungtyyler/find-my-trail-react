@@ -39,7 +39,7 @@ const TrailDetailPage = () => {
                 <Row className='align-items-center justify-content-center'>
                     <Col className='mx-5 text-center'>
                         {content}
-                        <a href='/' className='m-2 btn btn-success btn-lg'>Safety Information</a>
+                        <a href='/safety' className='m-2 btn btn-success btn-lg'>Safety Information</a>
                         <button className='m-2 btn btn-warning btn-lg'>Rate & Comment</button>
                     </Col>
                     <Col className='m-5' lg={5}>
