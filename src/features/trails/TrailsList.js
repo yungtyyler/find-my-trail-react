@@ -17,7 +17,7 @@ const TrailsList = ({ trails }) => {
     };
     
     return(
-        <Row className='py-3 ms-auto'>
+        <Row className='py-3 ms-auto justify-content-center'>
             {
                 trails.map((trail) => {
                     return (

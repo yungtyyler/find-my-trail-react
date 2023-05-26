@@ -52,4 +52,20 @@ export const selectAllTrails = (state) => state.trails.trailsArray;
 export const selectTrailById = (id) => (state) => {
     const trail = state.trails.trailsArray.find((trail) => trail.id === id);
     return trail || null;
-}
+};
+
+export const selectRandomTrails = (count) => (state) => {
+    const filteredTrails = [...state.trails.trailsArray]; // Create a copy of the array
+
+    const randomTrails = [];
+    const numTrails = Math.min(count, filteredTrails.length);
+
+    while (randomTrails.length < numTrails) {
+        const randomIndex = Math.floor(Math.random() * filteredTrails.length);
+        const randomTrail = filteredTrails[randomIndex];
+        randomTrails.push(randomTrail);
+        filteredTrails.splice(randomIndex, 1);
+    }
+
+    return randomTrails;
+};

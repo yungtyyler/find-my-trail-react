@@ -1,8 +1,8 @@
-import jumbotronImage1 from '../app/assets/img/jumbotronImage1.jpg';
-import jumbotronImage2 from '../app/assets/img/jumbotronImage2.jpg';
-import jumbotronImage3 from '../app/assets/img/jumbotronImage3.jpg';
-import jumbotronImage4 from '../app/assets/img/jumbotronImage4.jpg';
-import jumbotronImage5 from '../app/assets/img/jumbotronImage5.jpg';
+import jumbotronImage1 from '../app/assets/img/jumbotron/jumbotronImage1.jpg';
+import jumbotronImage2 from '../app/assets/img/jumbotron/jumbotronImage2.jpg';
+import jumbotronImage3 from '../app/assets/img/jumbotron/jumbotronImage3.jpg';
+import jumbotronImage4 from '../app/assets/img/jumbotron/jumbotronImage4.jpg';
+import jumbotronImage5 from '../app/assets/img/jumbotron/jumbotronImage5.jpg';
 import { useState } from 'react';
 
 const JumbotronCarousel = () => {
